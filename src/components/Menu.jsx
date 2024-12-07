@@ -17,12 +17,11 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
-import WhatshotIcon from '@mui/icons-material/Whatshot';
-import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
-import SchoolIcon from '@mui/icons-material/School';
-import PodcastsIcon from '@mui/icons-material/Podcasts';
+import WhatshotIcon from "@mui/icons-material/Whatshot";
+import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+import SchoolIcon from "@mui/icons-material/School";
+import PodcastsIcon from "@mui/icons-material/Podcasts";
 import { Link } from "react-router-dom";
-import { CardContent } from "@mui/material";
 const Container = styled.div`
   flex: 1.4;
   background-color: ${({ theme }) => theme.bgLighter};
@@ -49,9 +48,9 @@ const Container = styled.div`
   scrollbar-width: none;
   scrollbar-color: transparent transparent;
 
-    &:hover {
-   overflow-y:auto;
-
+  &:hover {
+    overflow-y: auto;
+  }
 `;
 const Wrapper = styled.div`
   padding: 18px 26px;
@@ -100,7 +99,7 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   gap: 5px;
-  border-radius:30px;
+  border-radius: 30px;
 `;
 
 const Title = styled.h2`
@@ -114,12 +113,12 @@ const Menu = ({ DarkMode, setDarkMode }) => {
   return (
     <Container>
       <Wrapper>
-        <Link to="/" style={{textDecoration:"none", color:"inherit"}}>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
           <Logo>
             <Img src={AnandTube} />
             AnandTube
           </Logo>
-          </Link>
+        </Link>
 
         <Item>
           <HomeIcon />
@@ -145,12 +144,10 @@ const Menu = ({ DarkMode, setDarkMode }) => {
         <Hr />
         <Login>
           Sign in to like videos, comment, and subscribe.
-          {/* <Link to="signin" style={{textDecoration:"none"}}> */}
-            <Button>
-              <AccountCircleOutlinedIcon />
-              SIGN IN
-            </Button>
-          {/* </Link> */}
+          <Button>
+            <AccountCircleOutlinedIcon />
+            SIGN IN
+          </Button>
         </Login>
         <Hr />
         <Title>Explore</Title>
@@ -160,7 +157,7 @@ const Menu = ({ DarkMode, setDarkMode }) => {
           Trending
         </Item>
         <Item>
-          <ShoppingCartCheckoutIcon/>
+          <ShoppingCartCheckoutIcon />
           Shopping
         </Item>
         <Item>
@@ -188,12 +185,12 @@ const Menu = ({ DarkMode, setDarkMode }) => {
           Live
         </Item>
         <Item>
-          <SchoolIcon/>
+          <SchoolIcon />
           Course
         </Item>
 
         <Item>
-          <PodcastsIcon/>
+          <PodcastsIcon />
           Podcast
         </Item>
         <Hr />
