@@ -1,4 +1,4 @@
-# Hi there, I'm [vAnand2295](https://github.com/vAnand2295)! 👋
+# Hi there, I'm Anand (https://github.com/vAnand2295)! 👋
 
 Welcome to my GitHub profile! I'm a passionate developer with interests in software development, open-source contributions, and continuous learning.
 
