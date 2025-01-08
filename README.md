@@ -24,7 +24,7 @@ Welcome to my GitHub profile! I'm a passionate developer with interests in softw
 
 ## 📫 How to reach me
 
-- LinkedIn: [vAnand2295](https://www.linkedin.com/in/vAnand2295)
+- LinkedIn: [vAnand2295](https://www.linkedin.com/in/anand-v-073544209/)
 - Email: vAnand2295@gmail.com
 
 
