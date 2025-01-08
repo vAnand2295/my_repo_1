@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../context/Cartcontext';
+import { FaStar } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const Prouductdetails = () => {
   const { addToCart } = useContext(CartContext);
@@ -31,7 +33,27 @@ const Prouductdetails = () => {
   }
 
   const handleAddToCart = () => {
-    addToCart(singleProduct, quantity); 
+    addToCart(singleProduct, quantity);
+    toast.success('Product added to cart successfully!');
+  };
+
+  const renderStars = (rating) => {
+    const totalStars = 5;
+    const filledStars = Math.floor(rating);
+    const halfStar = rating % 1 !== 0;
+    const emptyStars = totalStars - filledStars - (halfStar ? 1 : 0);
+
+    return (
+      <>
+        {[...Array(filledStars)].map((_, index) => (
+          <FaStar key={index} color="gold" />
+        ))}
+        {halfStar && <FaStar key="half" color="gold" style={{ clipPath: 'inset(0 50% 0 0)' }} />}
+        {[...Array(emptyStars)].map((_, index) => (
+          <FaStar key={index + filledStars + 1} color="lightgray" />
+        ))}
+      </>
+    );
   };
 
   return (
@@ -43,6 +65,8 @@ const Prouductdetails = () => {
         <p>Category: {singleProduct.category}</p>
         <p>Price: ${singleProduct.price}</p>
         <p>Description: {singleProduct.description}</p>
+        <p>Rating: {renderStars(singleProduct.rating.rate)}</p>
+        <p>count: {singleProduct.rating.count}</p>
         <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}>
           <button onClick={handleDecreaseQuantity} style={{ padding: '5px 10px', marginRight: '10px' }}>-</button>
           <input

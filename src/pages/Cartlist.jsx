@@ -16,8 +16,8 @@ const {setCart} = useContext(CartContext);
   const handleDelete = (indexToRemove) => {
     const updatedCartItems = cartItems.filter((_, index) => index !== indexToRemove);
     setCartItems(updatedCartItems);
-    localStorage.setItem('cart', JSON.stringify(updatedCartItems));
     setCart(updatedCartItems);
+    localStorage.setItem('cart', JSON.stringify(updatedCartItems));
 
   };
 

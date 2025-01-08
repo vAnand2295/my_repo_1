@@ -54,7 +54,7 @@ const CustomNavbar = ({ setSearchTerm }) => {
             <Form className="d-flex mx-auto" style={{ width: '50%' }}>
               <Form.Control
                 type="search"
-                placeholder="Search"
+                placeholder="Search for product"
                 className="me-2"
                 aria-label="Search"
                 onChange={handleSearch}

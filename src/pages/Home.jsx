@@ -6,6 +6,8 @@ const Home = ({ searchTerm }) => {
   const [product, setProduct] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
+  console.log(product,'dd');
+
   useEffect(() => {
     axios.get('https://fakestoreapi.com/products')
       .then(res => {
@@ -27,7 +29,7 @@ const Home = ({ searchTerm }) => {
   }, [searchTerm, product]);
 
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around',gap:'10px',marginTop:'50px'}}>
       {filteredProducts.map((item) => (
         <ProductCard key={item.id} product={item} />
       ))}
